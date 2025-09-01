@@ -37,7 +37,7 @@ const InvitationDetails = () => {
             }
             try {
                 setLoading(true);
-                const res = await fetch(`http://localhost:3000/api/auth/mla/invitations/details/${invitationId}`, {
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/mla/invitations/details/${invitationId}`, {
                     headers: { 'Authorization': `Bearer ${mlaToken}` }
                 });
 
