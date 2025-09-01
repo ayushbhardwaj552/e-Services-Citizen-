@@ -11,7 +11,7 @@ const ComplaintRespondModal = ({ complaint, onClose, onSubmit }) => {
         const markAsRead = async () => {
             if (!complaint || !mlaToken) return;
             try {
-                await fetch(`http://localhost:3000/api/auth/mla/complaints/${complaint._id}/read`, {
+                await fetch(`${import.meta.env.VITE_API_URL}/api/auth/mla/complaints/${complaint._id}/read`, {
                     method: 'PUT',
                     headers: {
                         'Authorization': `Bearer ${mlaToken}`
