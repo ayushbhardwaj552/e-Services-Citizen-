@@ -36,7 +36,7 @@ const UpcomingInvitations = () => {
             }
             try {
                 setLoading(true);
-                const res = await fetch('http://localhost:3000/api/auth/mla/invitations/dashboard', {
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/mla/invitations/dashboar`, {
                     headers: { 'Authorization': `Bearer ${mlaToken}` }
                 });
                 if (!res.ok) {
@@ -61,7 +61,7 @@ const UpcomingInvitations = () => {
 
     const handleResponseSubmit = async (invitationId, responseData) => {
         try {
-            const res = await fetch(`http://localhost:3000/api/auth/mla/invitations/${invitationId}/respond`, {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/mla/invitations/${invitationId}/respond`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${mlaToken}` },
                 body: JSON.stringify(responseData)
