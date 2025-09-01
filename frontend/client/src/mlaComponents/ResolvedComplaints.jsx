@@ -35,7 +35,7 @@ const ResolvedComplaints = () => {
             try {
                 setLoading(true);
                 setError(null);
-                const res = await fetch('http://localhost:3000/api/auth/mla/complaints', {
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/mla/complaints`, {
                     headers: { 'Authorization': `Bearer ${mlaToken}` }
                 });
 
