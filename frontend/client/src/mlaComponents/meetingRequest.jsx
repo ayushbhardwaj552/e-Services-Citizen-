@@ -49,7 +49,7 @@ const MeetingRequests = () => {
         setError(null);
 
         const res = await fetch(
-          "http://localhost:3000/api/auth/mla/dashboard",
+          `${import.meta.env.VITE_API_URL}/api/auth/mla/dashboard`,
           {
             headers: { Authorization: `Bearer ${mlaToken}` },
           }
@@ -84,7 +84,7 @@ const MeetingRequests = () => {
       setError(null);
 
       const res = await fetch(
-        `http://localhost:3000/api/auth/mla/meeting-requests/${requestId}`,
+        `${import.meta.env.VITE_API_URL}/api/auth/mla/meeting-requests/${requestId}`,
         {
           method: "PUT",
           headers: {
