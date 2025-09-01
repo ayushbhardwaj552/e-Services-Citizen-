@@ -11,7 +11,7 @@ const UserMeetingHistory = () => {
     useEffect(() => {
         const getMyMeetingRequestHistory = async () => {
             try {
-                const res = await fetch('http://localhost:3000/api/auth/meeting-requests/history', {
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/meeting-requests/history`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
