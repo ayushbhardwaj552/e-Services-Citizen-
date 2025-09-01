@@ -51,7 +51,7 @@ const MlaLogin = () => {
 
     try {
       // ✅ CHANGED: Switched from fetch to axios.post
-      const response = await axios.post('http://localhost:3000/api/auth/mla-login', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/mla-login`, {
         email,
         password,
       });
