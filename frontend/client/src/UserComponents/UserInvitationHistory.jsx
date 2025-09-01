@@ -20,7 +20,7 @@ const UserInvitationHistory = () => {
                 setLoading(true);
                 setError(null); 
 
-                const res = await fetch('http://localhost:3000/api/auth/invitations/history', {
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/invitations/history`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
