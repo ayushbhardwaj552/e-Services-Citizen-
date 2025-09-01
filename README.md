@@ -36,8 +36,7 @@ A **full-stack web application** enabling citizens to connect with their MLA to 
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/ayushbhardwaj552/e-Services-Citizen-/tree/main
 
 ### 2. Install dependencies
 npm install
@@ -82,5 +81,5 @@ Supports 100+ simultaneous users with real-time updates
 
 ## 📫 Contact
 For queries, reach out at:
-Email: your-email@example.com
-LinkedIn: Your LinkedIn
+Email: ayushbhardwajk@gmail.com
+
