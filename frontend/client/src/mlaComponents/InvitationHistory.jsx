@@ -34,7 +34,7 @@ const InvitationHistory = () => {
             }
             try {
                 setLoading(true);
-                const res = await fetch('http://localhost:3000/api/auth/mla/invitations/dashboard', {
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/mla/invitations/dashboard`, {
                     headers: { 'Authorization': `Bearer ${mlaToken}` }
                 });
                 if (!res.ok) {
