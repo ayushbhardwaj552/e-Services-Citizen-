@@ -83,7 +83,7 @@ const MlaPublicCalendar = () => {
                 setLoading(true);
                 setError(null);
                
-                const res = await fetch(`http://localhost:3000/api/auth/public/calendar/${mlaId}`);
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/public/calendar/${mlaId}`);
                 if (!res.ok) {
                     throw new Error("Could not fetch the MLA's public calendar.");
                 }
