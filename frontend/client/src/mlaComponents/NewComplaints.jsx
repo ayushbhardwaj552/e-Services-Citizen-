@@ -37,7 +37,7 @@ const NewComplaints = () => {
             try {
                 setLoading(true);
                 setError(null);
-                const res = await fetch('http://localhost:3000/api/auth/mla/complaints', {
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/mla/complaints`, {
                     headers: { 'Authorization': `Bearer ${mlaToken}` }
                 });
                 if (!res.ok) {
@@ -61,7 +61,7 @@ const NewComplaints = () => {
 
     const handleResponseSubmit = async (complaintId, responseData) => {
         try {
-            const res = await fetch(`http://localhost:3000/api/auth/mla/complaints/${complaintId}/respond`, {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/mla/complaints/${complaintId}/respond`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
