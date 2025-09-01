@@ -24,7 +24,7 @@ const UserComplaintHistory = () => {
                 setLoading(true);
                 setError(null); 
 
-                const res = await fetch('http://localhost:3000/api/auth/complaints/history', {
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/complaints/history`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
