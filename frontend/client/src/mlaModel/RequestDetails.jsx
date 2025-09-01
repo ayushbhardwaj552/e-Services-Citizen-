@@ -39,7 +39,7 @@ const RequestDetails = () => {
         setLoading(true);
         setError(null);
         const res = await axios.get(
-          `http://localhost:3000/api/auth/meeting-request/history/${requestId}`,
+          `${import.meta.env.VITE_API_URL}/api/auth/meeting-request/history/${requestId}`,
           { headers: { Authorization: `Bearer ${mlaToken}` } }
         );
         if (res.data.success) {
@@ -122,9 +122,9 @@ const RequestDetails = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {request.mediaFiles.map((file, index) => (
                   <div key={index} className="border rounded-lg overflow-hidden">
-                    {file.fileType === 'image' && <img src={`http://localhost:3000/${file.url}`} alt="Attachment" className="w-full h-auto object-cover"/>}
-                    {file.fileType === 'video' && <video controls src={`http://localhost:3000/${file.url}`} className="w-full h-auto"/>}
-                    {file.fileType === 'pdf' && <a href={`http://localhost:3000/${file.url}`} target="_blank" rel="noopener noreferrer" className="block p-4 text-center bg-gray-100 hover:bg-gray-200"><p className="font-semibold text-blue-600">View PDF</p></a>}
+                    {file.fileType === 'image' && <img src={`${import.meta.env.VITE_API_URL}/${file.url}`} alt="Attachment" className="w-full h-auto object-cover"/>}
+                    {file.fileType === 'video' && <video controls src={`${import.meta.env.VITE_API_URL}/${file.url}`} className="w-full h-auto"/>}
+                    {file.fileType === 'pdf' && <a href={`${import.meta.env.VITE_API_URL}/${file.url}`} target="_blank" rel="noopener noreferrer" className="block p-4 text-center bg-gray-100 hover:bg-gray-200"><p className="font-semibold text-blue-600">View PDF</p></a>}
                   </div>
                 ))}
               </div>
