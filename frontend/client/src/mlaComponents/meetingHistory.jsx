@@ -34,7 +34,7 @@ const MeetingHistory = () => {
             try {
                 setLoading(true);
                 setError(null);
-                const res = await fetch('http://localhost:3000/api/auth/mla/dashboard', {
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/mla/dashboard`, {
                     headers: { 'Authorization': `Bearer ${mlaToken}` }
                 });
 
