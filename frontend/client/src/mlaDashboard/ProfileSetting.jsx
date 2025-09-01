@@ -34,7 +34,7 @@ const ProfileSettings = () => {
                 return;
             }
             try {
-                const res = await axios.get('http://localhost:3000/api/auth/mla/profile', {
+                const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/auth/mla/profile`, {
                     headers: { 'Authorization': `Bearer ${mlaToken}` }
                 });
                 if (res.data.success) {
@@ -66,7 +66,7 @@ const ProfileSettings = () => {
         }
 
         try {
-            const res = await axios.put('http://localhost:3000/api/auth/mla/change-password', passwordData, {
+            const res = await axios.put(`${import.meta.env.VITE_API_URL}/api/auth/mla/change-password`, passwordData, {
                 headers: { 'Authorization': `Bearer ${mlaToken}` }
             });
 
