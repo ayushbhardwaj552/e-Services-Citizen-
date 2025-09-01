@@ -75,11 +75,11 @@ export const DashboardHome = () => {
             try {
                 const [statsResponse, activityResponse] = await Promise.all([
                     // Stats API call
-                    axios.get('http://localhost:3000/api/auth/mla/stats', {
+                    axios.get(`${import.meta.env.VITE_API_URL}/api/auth/mla/stats`, {
                         headers: { 'Authorization': `Bearer ${mlaToken}` }
                     }),
                     // Recent Activity API call (You will need to create this endpoint)
-                    axios.get('http://localhost:3000/api/auth/mla/recent-activity', {
+                    axios.get(`${import.meta.env.VITE_API_URL}/api/auth/mla/recent-activity`, {
                         headers: { 'Authorization': `Bearer ${mlaToken}` }
                     })
                 ]);
