@@ -64,7 +64,7 @@ const UserSidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
                 { name: 'View History', path: '/user-dashboard/invitations/history' },
             ],
         },
-        { name: "MLA's Calendar", icon: <FiCalendar />, path: '/user-dashboard/mla-calendar/68946e516968d9365cf6b2f3', subOptions: [] },
+        { name: "MLA's Calendar", icon: <FiCalendar />, path: '/user-dashboard/mla-calendar/68b431b3b727730ea29af648', subOptions: [] },
         // The FIX is here: use the correct nested path
         { name: 'My Profile', icon: <FiUser />, path: `/user-dashboard/user-profile/${user._id}`, subOptions: [] },
     ];
