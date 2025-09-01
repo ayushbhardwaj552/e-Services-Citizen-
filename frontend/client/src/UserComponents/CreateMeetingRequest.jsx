@@ -95,7 +95,7 @@ const CreateMeetingRequest = () => {
                 submissionData.append(key, value ?? "");
             });
             files.forEach(file => submissionData.append('mediaFiles', file));
-            const response = await axios.post("http://localhost:3000/api/auth/request-meeting", submissionData, {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/request-meeting`, submissionData, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
