@@ -41,7 +41,7 @@ const UserDashboard = () => {
                 </Route>
 
                 {/* MLA calendar is now correctly routed with mlaId */}
-                <Route path="mla-calendar/68946e516968d9365cf6b2f3" element={<MlaPublicCalendar />} />
+                <Route path="mla-calendar/68b431b3b727730ea29af648" element={<MlaPublicCalendar />} />
 
                 <Route path="user-profile/:id" element={<UserProfile />} />
             </Routes>
